@@ -14,7 +14,9 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "swiftBot-Qiscus",
-            dependencies: []),
+            dependencies: [
+                .Package(url: "https://github.com/uraimo/SwiftyGPIO.git", majorVersion: 0)
+            ]),
         .testTarget(
             name: "swiftBot-QiscusTests",
             dependencies: ["swiftBot-Qiscus"]),
