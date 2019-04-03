@@ -1,12 +1,12 @@
- import SwiftyGPIO
+import SwiftyGPIO
 import Foundation
 
-print("Hello, world!")
+print("Hi, Juju")
 
  // Get a dictionary of all the gpio pins
  let gpios = SwiftyGPIO.GPIOs(for: .RaspberryPi3)
  // Get the pin that you connected the LED to. Remember to set the right pin number, for me it was 27
- guard let ledGpio = gpios[GPIOName.P27] else {
+ guard let ledGpio = gpios[.P2] else {
      fatalError("Could not initialize the gpio")
  }
  // Set the pin direction to .OUT and turn it off
